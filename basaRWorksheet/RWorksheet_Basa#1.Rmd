@@ -8,17 +8,87 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-```{r cars}
-summary(cars)
+1.Vector Age
+```{r}
+age_ <- c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41,
+51, 35, 24, 33, 41.)
+length(age_)
+```
+2.Reciprocal Age
+```{r}
+age_ <-c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41,
+51, 35, 24, 33, 41.)
+recipro_age <- 1/age_
+print(recipro_age)
+```
+3.New Age
+```{r}
+age_ <-c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41,
+51, 35, 24, 33, 41.)
+new_age <-c (age_, 0, age_)
+print(new_age)
+```
+4.Sort Val. Age
+```{r}
+age_ <-c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41,
+51, 35, 24, 33, 41.)
+sort_age <- sort(age_)
+print(sort_age)
+```
+Min and Max Age
+```{r}
+age_ <-c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41,
+51, 35, 24, 33, 41.)
+min_age <- min(age_)
+max_age <- max(age_)
+print(min_age)
+print(max_age)
+```
+6. 2nd Data Set
+```{r}
+data_ <- c(2.4, 2.8, 2.1, 2.5, 2.4, 2.2, 2.5,
+2.3, 2.5, 2.3, 2.4, 2.7)
+length(data_)
+```
+7. Doubled Data
+```{r}
+data_ <- c(2.4, 2.8, 2.1, 2.5, 2.4, 2.2, 2.5,
+2.3, 2.5, 2.3, 2.4, 2.7)
+data_doubled <- data_*2
+print(data_doubled)
+```
+8. Sequence
++ 8.1
+```{r}
+seq(1:100)
+```
++ 8.2
+```{r}
+seq(20:60)
+```
++ 8.3
+```{r}
+mean(20:60)
+```
+8.4
+```{r}
+sum(51:91)
+```
+8.5
+```{r}
+seq(1:1000)
+```
+9. Filter
+```{r}
+Filter(function(i) { all(i %% c(3,5,7) != 0) }, seq(100))
+```
+10. Backward
+```{r}
+rev(1:100)
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
