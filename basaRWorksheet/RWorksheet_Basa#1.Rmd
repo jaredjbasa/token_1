@@ -86,7 +86,36 @@ Filter(function(i) { all(i %% c(3,5,7) != 0) }, seq(100))
 ```{r}
 rev(1:100)
 ```
+11. List all the natural members below 25 that are multiple of 3 and 5
+```{r}
+nums <- 1:25
+multiples <- nums[nums %% 3 == 0 | nums %% 5 == 0]
+print(multiples)
+sum(multiples)
+```
+11.a
+```{r}
+startpoint <- 10
+endpoint <- 11
 
+datapoints <- seq(startpoint, endpoint)
+print(datapoints)
+numdata <- length(startpoint:endpoint)
+print(numdata)
+```
+12. Statements
+```{r}
+x <- {0 + x + 5 +}
+```
+13. *Set up a vector named score, consisting of 72, 86, 92, 63, 88, 89, 91, 92, 75,
+75 and 77. To access individual elements of an atomic vector, one generally uses the
+x[i] construction.
+Find x[2] and x[3]. Write the R code and its output.
+```{r}
+score <- c(72, 86, 92, 63, 88, 89, 91, 92, 75, 75,77)
+score[2]
+score[3]
+```
 
 
 
