@@ -104,9 +104,10 @@ numdata <- length(startpoint:endpoint)
 print(numdata)
 ```
 12. Statements
-```{r}
-x <- {0 + x + 5 +}
-```
+x <- {0 + x + 5 + }
+Describe the output.
+the output is an error.
+
 13. *Set up a vector named score, consisting of 72, 86, 92, 63, 88, 89, 91, 92, 75,
 75 and 77. To access individual elements of an atomic vector, one generally uses the
 x[i] construction.
@@ -116,7 +117,20 @@ score <- c(72, 86, 92, 63, 88, 89, 91, 92, 75, 75,77)
 score[2]
 score[3]
 ```
-
+14. Vector
+```{r}
+a = c(1,2,NA,4,NA,6,7)
+print(a,na.print="-999")
+```
+15. special type of function
+```{r}
+name = readline(prompt="Input your name: ")
+age = readline(prompt="Input your age: ")
+print(paste("My name is",name, "and I am",age ,"years old."))
+print(R.version.string)
+```
+The output is "My name is Jared J P. Basa and I am 20 years old."
+"R version 4.4.1 (2024-06-14)"
 
 
 
