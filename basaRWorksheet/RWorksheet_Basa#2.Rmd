@@ -117,4 +117,4 @@ purchase)‘. Write the R scripts and its output.
 average <- weighted.mean(php, liters)
 average
 ```
-
+fdgd
