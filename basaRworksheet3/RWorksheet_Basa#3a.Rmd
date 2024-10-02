@@ -1,0 +1,104 @@
+---
+title: "RWorksheet_Basa#3a"
+author: "Jared J Basa"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+Using Vectors
+1. There is a built-in vector LETTERS contains the uppercase letters of the alphabet
+and letters which contains the lowercase letters of the alphabet.
+LETTERS
+```{r}
+LETTERS 
+```
+letters
+```{r}
+letters
+```
+a. You need to produce a vector that contains the first 11 letters.
+```{r}
+first11letters <- LETTERS[1:11]
+first11letters
+```
+
+b. Produce a vector that contains the odd numbered letters.
+```{r}
+oddletters <- LETTERS[seq(1, length(LETTERS), by = 2)]
+oddletters
+```
+
+c. Produce a vector that contains the vowels
+```{r}
+vowels <- LETTERS[c(1, 5, 9, 15, 21)]  
+vowels
+```
+Based on the above vector letters:
+d. Produce a vector that contains the last 5 lowercase letters.
+```{r}
+last5lowercase <- letters[22:26]
+last5lowercase
+```
+
+e. Produce a vector that contains letters between 15 to 24 letters in lowercase.
+```{r}
+letters15_24 <- letters[15:24]
+letters15_24
+```
+2. Create a vector(not a dataframe) with the average temperatures in April for Tugue-
+garao City, Manila, Iloilo City, Tacloban, Samal Island, and Davao City. The average
+
+temperatures in Celcius are 42, 39, 34, 34, 30, and 27 degrees.
+
+a. What is the R code and its result for creating a character vector for the city/town
+of Tuguegarao City, Manila, Iloilo City, Tacloban,Samal Island, and Davao City? Name the
+object as city. The names should follow the same order as in the instruction.
+```{r}
+city <- c("Tuguegarao City", "Manila", "Iloilo City", "Tacloban", "Samal Island", "Davao City")
+city
+```
+
+b. The average temperatures in Celcius are 42, 39, 34, 34, 30, and 27 degrees.
+Name the object as temp. Write the R code and its output. Numbers should also follow
+what is in the instruction.
+```{r}
+temp <- c(42, 39, 34, 34, 30, 27)
+temp
+```
+c. Create a dataframe to combine the city and the temp by using ‘data.frame(). What
+the R code and its result?
+```{r}
+data <- data.frame(City = city, Temperature = temp)
+data
+```
+d. Associate the dataframe you have created in 2.(c) by naming the columns using
+the names() function. Change the column names by using names() function as City and
+Temperature. What is the R code and its result?
+```{r}
+names(data) <- c("City", "Temperature")
+data
+```
+e. Print the structure by using str() function. Describe the output.
+```{r}
+str(data)
+```
+f. From the answer in d, what is the content of row 3 and row 4 What is its R code and
+its output?
+```{r}
+data[3:4, ]
+```
+g. From the answer in d, display the city with highest temperature and the city with
+the lowest temperature. What is its R code and its output?
+```{r}
+highest_temp_city <- data[which.max(data$Temperature), ]
+lowest_temp_city <- data[which.min(data$Temperature), ]
+
+highest_temp_city
+lowest_temp_city
+```
+
