@@ -117,4 +117,39 @@ purchase)‘. Write the R scripts and its output.
 average <- weighted.mean(php, liters)
 average
 ```
-fdgd
+7. R has actually lots of built-in datasets. For example, the rivers data “gives the lengths
+(in miles) of 141 “major” rivers in North America, as compiled by the US Geological
+Survey”.
+a. Type “rivers” in your R console.
+Create a vector data with 7
+elements, containing the number of elements (length)
+in rivers, their sum (sum), mean (mean),
+median(median), variance(var), standard deviation(sd),
+minimum (min) and maximum (max).
+
+```{r}
+data(rivers)
+
+vector_data <- c(
+  length = length(rivers),
+  sum = sum(rivers),
+  mean = mean(rivers),
+  median = median(rivers),
+  variance = var(rivers),
+  sd = sd(rivers),
+  min =min(rivers),
+  max = max(rivers)
+)
+
+vector_data
+```
+b. What are the results?
+
+length(rivers): 141.0000
+sum(rivers): 83357.0000
+mean(rivers): 591.1844
+median(rivers): 425.0000
+var(rivers): 243908.4086
+sd(rivers): 493.8708
+min(rivers): 135.0000
+max(rivers): 3710.0000
