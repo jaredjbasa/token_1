@@ -101,4 +101,65 @@ lowest_temp_city <- data[which.min(data$Temperature), ]
 highest_temp_city
 lowest_temp_city
 ```
+Using Matrices
+a.
+```{r}
+matrix_data <- matrix(c(1:8, 11:14), nrow = 3, ncol = 4)
+matrix_data
+```
+b. 
+```{r}
+matrix_multiply <- matrix_data * 2
+matrix_multiply
+```
+c. 
+```{r}
+row2 <- matrix_data[2, ]
+row2
+```
+d.
+```{r}
+cols3_4_row1_2 <- matrix_data[1:2,3:4]
+cols3_4_row1_2
+```
+e.
+```{r}
+row3_cols2_3 <- matrix_data[3, 2:3]
+row3_cols2_3
+```
+f.
+```{r}
+col4 <- matrix_data[ ,4]
+col4
+```
+g. 
+```{r}
+rownames(matrix_multiply) <- c("isa", "dalawa", "tatlo")
+colnames(matrix_multiply) <- c("uno", "dos", "tres", "quatro")
+matrix_multiply
+```
+h.
+```{r}
+reshape <- matrix(matrix_data, nrow = 6, ncol = 2)
+reshape
+```
+Using Arrays
+3. 
+a.
+```{r}
+num_values <- c(1, 2, 3, 6, 7, 8, 9, 0, 3, 4, 5, 1)
+num_values_repeat <- rep(num_values, times = 2)
+array_3d <- array(num_values_repeat, dim = c(2,4,3))
+array_3d
+```
+b. There are 3 dimensions.
+
+c.
+
+```{r}
+dimnames(array_3d) <-list(c("a", "b"),c("A", "B", "C", "D"),c("1st-Dimensional Array", "2nd-Dimensional Array", "3rd-Dimensional Array"))
+array_3d
+```
+
+
 
