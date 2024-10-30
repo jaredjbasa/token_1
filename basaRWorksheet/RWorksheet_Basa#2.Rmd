@@ -1,8 +1,8 @@
 ---
-title: "RWorksheet_Basa#1"
+title: "RWorksheet_Basa#2"
 author: "Jared J Basa"
 date: "`r Sys.Date()`"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
