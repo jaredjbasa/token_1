@@ -144,7 +144,7 @@ reshape <- matrix(matrix_data, nrow = 6, ncol = 2)
 reshape
 ```
 Using Arrays
-3. 
+3. array
 a.
 ```{r}
 num_values <- c(1, 2, 3, 6, 7, 8, 9, 0, 3, 4, 5, 1)
