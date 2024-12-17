@@ -1,0 +1,51 @@
+---
+title: "RWorksheet_Basa#4a"
+author: "Jared J Basa"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. The table below shows the data about shoe size and height. Create a data frame.
+```{r}
+Table <- data.frame(
+  Shoe_size = c(6.5, 9.0, 8.5, 8.5, 10.5, 7.0, 9.5, 9.0, 13.0, 7.5, 10.5, 8.5, 12.0, 10.5, 13.0, 11.5, 8.5, 5.0, 10.0, 6.5, 7.5, 8.5, 10.5, 8.5, 10.5, 11.0, 9.0, 13.0),
+  Height = c(66.0, 68.0, 64.5, 65.0, 70.0, 64.0, 70.0, 71.0, 72.0, 64.0, 74.5, 67.0, 71.0, 71.0, 77.0, 72.0, 59.0, 62.0, 72.0, 66.0, 64.0, 67.0, 73.0, 69.0, 72.0, 70.0, 69.0, 70.0),
+  Gender = c("F", "F", "F", "F", "M", "F", "F", "F", "M", "F", "M", "F", "M", "M", "M", "M", "F", "F", "M", "F", "F", "M", "M", "F", "M", "M", "M", "M")
+)
+
+print(Table)
+```
+a. Describe the data.
+Data contains shoe size, height, and gender.
+
+b. Create a subset by males and females with their corresponding shoe size and height.
+What its result? Show the R scripts.
+```{r}
+male <- Table[Table$Gender == "M",]
+female <- Table[Table$Gender == "F",]
+
+print(male)
+print(female)
+```
+
+
+c. Find the mean of shoe size and height of the respondents. Write the R scripts and its
+result.
+```{r}
+meanShoe_size <- mean(Table$Shoe_size)
+meanHeight <- mean(Table$Height)
+
+print(paste("Mean Shoe Size:", meanShoe_size))
+print(paste("Mean Height:", meanHeight))
+```
+
+
+d. Is there a relationship between shoe size and height? Why?
+```{r}
+
+```
+
