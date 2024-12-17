@@ -58,6 +58,26 @@ Type_of_House
 g. Select only all Males respondent that their father occupation was farmer. Write the
 codes and its output.
 ```{r}
-
+maleFarmers <- Table[Table$Sex == 1 & Table$Fathers_Occupation == 1, ]
+maleFarmers
 ```
+h. Select only all females respondent that have greater than or equal to 5 number of
+siblings attending school. Write the codes and its outputs.
+```{r}
+femaleMoreSiblings <- Table[Table$Sex == 2 & Table$Siblings_at_Schools >= 5, ]
+femaleMoreSiblings
+```
+2. Write a R program to create an empty data frame. Using the following codes:
+```{r}
+df = data.frame(Ints=integer(),
 
+Doubles=double(), Characters=character(),
+Logicals=logical(),
+Factors=factor(),
+stringsAsFactors=FALSE)
+
+print("Structure of the empty dataframe:")
+print(str(df))
+```
+a. Describe the results.
+The output shows data frame is empty and shows structure and types of columns that was defined.
