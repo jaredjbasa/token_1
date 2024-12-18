@@ -64,7 +64,7 @@ maleFarmers
 h. Select only all females respondent that have greater than or equal to 5 number of
 siblings attending school. Write the codes and its outputs.
 ```{r}
-femaleMoreSiblings <- Table[Table$Sex == 2 & Table$Siblings_at_Schools >= 5, ]
+femaleMoreSiblings <- Table[Table$Sex == 2 & Table$Siblings_at_School >= 5, ]
 femaleMoreSiblings
 ```
 2. Write a R program to create an empty data frame. Using the following codes:
@@ -81,3 +81,52 @@ print(str(df))
 ```
 a. Describe the results.
 The output shows data frame is empty and shows structure and types of columns that was defined.
+
+3. Create a .csv file of this. Save it as HouseholdData.csv 
+a. Import the csv file into the R environment. Write the codes.
+```{r}
+houseHold <- read.csv("HouseholdData.csv")
+houseHold
+```
+
+b. Convert the Sex into factor using factor() function and change it into integer.[Legend:
+Male = 1 and Female = 2]. Write the R codes and its output. 
+```{r}
+houseHold$Sex <- factor(houseHold$Sex, levels = c("Male", "Female"), labels = c(1, 2))
+houseHold$Sex <- as.integer(houseHold$Sex)
+houseHold
+```
+
+c. Convert the Type of Houses into factor and change it into integer. [Legend: Wood
+= 1; Congrete = 2; Semi-Congrete = 3]. Write the R codes and its output.
+```{r}
+houseHold$Types.of.Houses <- factor(houseHold$Types.of.Houses, 
+                                     levels = c("Wood", "Concrete", "Semi-concrete"), 
+                                     labels = c(1, 2, 3))
+houseHold$Types.of.Houses <- as.integer(houseHold$Types.of.Houses)
+houseHold
+```
+
+d. On father’s occupation, factor it as Farmer = 1; Driver = 2; and Others = 3. What
+is the R code and its output?
+
+```{r}
+houseHold$Fathers.Occupation <- factor(houseHold$Fathers.Occupation, levels = c(1, 2, 3), labels = c("Farmer", "Driver", "Others"))
+houseHold
+```
+e. Select only all females respondent that has a father whose occupation is driver. Write
+the codes and its output.
+```{r}
+fatherDriver <- subset(houseHold, Sex == 2 & Fathers.Occupation == "Driver")
+fatherDriver
+```
+
+
+f. Select the respondents that have greater than or equal to 5 number of siblings attending
+school. Write the codes and its output.
+```{r}
+SiblingSchool <- subset(houseHold, Siblings.at.School >= 5)
+SiblingSchool
+```
+4. Interpret the graph. 
+The graph shows from July 14 to July 21, 2020, the daily count of negative tweets is higher than any other category.Negative tweets reached its peak in July 15. Positive and neutral tweets is much lesser than negative tweets each day.
