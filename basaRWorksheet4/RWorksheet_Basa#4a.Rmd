@@ -46,6 +46,71 @@ print(paste("Mean Height:", meanHeight))
 
 d. Is there a relationship between shoe size and height? Why?
 ```{r}
+plot(Table$Shoe_size, Table$Height, main="Shoe Size vs Height", xlab="Shoe Size", ylab="Height")
+```
 
+Factors
+A nominal variable is a categorical variable without an implied order. This means
+that it is impossible to say that ‘one is worth more than the other’. In contrast,
+ordinal variables do have a natural ordering.
+Example:
+Gender <- c("M","F","F","M")
+factor_Gender <- factor(Gender)
+factor_Gender
+
+## [1] M F F M
+## Levels: F M
+
+2. Construct character vector months to a factor with factor() and assign the result to
+factor_months_vector. Print out factor_months_vector and assert that R prints out
+the factor levels below the actual values.
+Consider data consisting of the names of months:
+"March","April","January","November","January",
+"September","October","September","November","August",
+"January","November","November","February","May","August", "July","December","August","August","September","November","February",|
+April")
+```{r}
+vectorMonths <- c("March", "April", "January", "November", "January", "September", "October", "September", "November", "August", "January", "November", "November", "February", "May", "August", "July", "December", "August", "August", "September", "November", "February", "April")
+
+
+factor_months_vector <- factor(vectorMonths)
+print(factor_months_vector)
+```
+
+3. Then check the summary() of the months_vector and factor_months_vector. | Interpret the results of both vectors. Are they both equally useful in this case? 
+```{r}
+summary_vectorMonths <- summary(vectorMonths)
+summary_factor_months_vector <- summary(factor_months_vector)
+
+print(summary_vectorMonths)
+print(summary_factor_months_vector)
+```
+
+4. Create a vector and factor for the table below.
+Direction Frequency
+East 1
+West 4
+North 3
+Note: Apply the factor function with required order of the level.
+new_order_data <- factor(factor_data,levels = c("East","West","North"))
+print(new_order_data)
+```{r}
+factor_data <- c("East", "West", "North")
+frequency_vector <- c(1, 4, 3)
+new_order_data <- factor(factor_data,levels = c("East","West","North"))
+print(new_order_data)
+```
+5. Enter the data below in Excel with file name = import_march.csv
+
+Figure 2: Excel Data
+
+a. Import the excel file into the Environment Pane using read.table() function.
+Write the code. 
+```{r}
+data <- read.table("import_march.csv", header = TRUE, sep = ",")
+```
+b. View the dataset. Write the R scripts and its result.
+```{r}
+data
 ```
 
